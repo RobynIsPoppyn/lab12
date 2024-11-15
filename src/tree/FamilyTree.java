@@ -22,6 +22,9 @@ public class FamilyTree {
         }
 
         void addChild(TreeNode childNode) {
+
+            children.add(childNode);
+            childNode.parent = this;
             // Add childNode to this node's children list. Also
             // set childNode's parent to this node.
         }
@@ -30,7 +33,7 @@ public class FamilyTree {
         // with the given name. Returns the node, or null if not found.
         TreeNode getNodeWithName(String targetName) {
             // Does this node have the target name?
-            if (?????)
+            if (name == targetName)
                 return this;
                     
             // No, recurse. Check all children of this node.
